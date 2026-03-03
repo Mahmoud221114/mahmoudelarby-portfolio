@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mahmoud Elarby — Front-End Developer & JavaScript Specialist. Building fast, beautiful, and accessible web experiences." />
+  <meta name="keywords" content="Frontend Developer, JavaScript, React, Portfolio, Web Developer, Egypt" />
+  <meta name="author" content="Mahmoud Elarby" />
+  <meta property="og:title" content="Mahmoud Elarby — Front-End Developer" />
+  <meta property="og:description" content="Building exceptional digital experiences with modern web technologies." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#050a0e" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23050a0e'/><path d='M6 10l6 6-6 6' stroke='%2300e5b0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M14 22h12' stroke='%2300e5b0' stroke-width='2' stroke-linecap='round' fill='none'/></svg>" />
+  <title>Mahmoud Elarby — Front-End Developer</title>
+  <!-- Fonts: Clash Display (editorial) + DM Sans (body) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!--  PAGE LOADER  -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <svg viewBox="0 0 24 24" fill="none" width="32" height="32">
+          <path d="M4 8l5 4-5 4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11 16h9" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+      <span class="loader-pct">0%</span>
+    </div>
+  </div>
+
+  <!-- ░░ NAVBAR ░░ -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Mahmoud Elarby Home">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+            <path d="M4 8l5 4-5 4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11 16h9" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">ME<span class="logo-dot">.</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn-hire">Hire Me</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about"    class="mobile-link">About</a></li>
+        <li><a href="#skills"   class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#contact"  class="mobile-link">Contact</a></li>
+        <li><a href="#contact"  class="mobile-link mobile-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ░░ HERO ░░ -->
+    <section id="hero" class="hero-section">
+      <!-- Animated background shapes -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Available for work</span>
+          <div class="status-dot"></div>
+        </div>
+
+        <h1 class="hero-heading">
+          <span class="heading-line-1 reveal-text">Mahmoud</span>
+          <span class="heading-line-2 reveal-text">Elarby</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          <span class="subtitle-static">Front-End Developer |&nbsp;</span>
+          <span class="typewriter" id="typewriter" aria-live="polite"></span><span class="cursor">▌</span>
+        </div>
+
+        <p class="hero-description reveal-fade">
+          I craft pixel-perfect, high-performance web experiences using modern
+          JavaScript and cutting-edge tools. Let's build something exceptional together.
+        </p>
+
+        <div class="hero-actions reveal-fade">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+
+        <div class="hero-meta reveal-fade">
+          <div class="meta-chip">
+            <div class="chip-dot chip-green"></div>
+            <span>Open to opportunities</span>
+          </div>
+          <div class="meta-chip">
+            <div class="chip-dot chip-teal"></div>
+            <span>4+ Years Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero code mockup -->
+      <div class="hero-visual reveal-right">
+        <div class="code-card">
+          <div class="code-card-header">
+            <div class="traffic-lights">
+              <div class="tl tl-red"></div>
+              <div class="tl tl-yellow"></div>
+              <div class="tl tl-green"></div>
+            </div>
+            <span class="code-filename">developer.js</span>
+          </div>
+          <div class="code-body">
+            <div class="code-line"><span class="kw">const</span> <span class="var">developer</span> <span class="op">=</span> <span class="bracket">{</span></div>
+            <div class="code-line pl"><span class="key">name</span><span class="op">:</span> <span class="str">"Mahmoud Elarby"</span><span class="op">,</span></div>
+            <div class="code-line pl"><span class="key">role</span><span class="op">:</span> <span class="str">"Front-End Dev"</span><span class="op">,</span></div>
+            <div class="code-line pl"><span class="key">stack</span><span class="op">:</span> <span class="bracket">[</span><span class="str">"JS"</span><span class="op">,</span> <span class="str">"React"</span><span class="op">,</span> <span class="str">"CSS"</span><span class="bracket">]</span><span class="op">,</span></div>
+            <div class="code-line pl"><span class="key">available</span><span class="op">:</span> <span class="bool">true</span><span class="op">,</span></div>
+            <div class="code-line pl"><span class="key">passion</span><span class="op">:</span> <span class="str">"Great UX"</span></div>
+            <div class="code-line"><span class="bracket">}</span></div>
+            <div class="code-line mt"><span class="kw">export</span> <span class="kw">default</span> <span class="var">developer</span><span class="op">;</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ░░ ABOUT ░░ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="eyebrow-row">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">About Me</span>
+          </div>
+          <h2 class="section-title">Who I <span class="accent-text">Am</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: terminal card -->
+          <div class="about-terminal animate-on-scroll slide-left">
+            <div class="terminal-header">
+              <div class="traffic-lights">
+                <div class="tl tl-red"></div>
+                <div class="tl tl-yellow"></div>
+                <div class="tl tl-green"></div>
+              </div>
+              <span class="code-filename">about.json</span>
+            </div>
+            <div class="terminal-body">
+              <div class="json-line"><span class="json-bracket">{</span></div>
+              <div class="json-line pl"><span class="json-key">"name"</span><span class="json-colon">:</span> <span class="json-str">"Mahmoud Elarby"</span><span class="json-comma">,</span></div>
+              <div class="json-line pl"><span class="json-key">"location"</span><span class="json-colon">:</span> <span class="json-str">"Egypt 🇪🇬"</span><span class="json-comma">,</span></div>
+              <div class="json-line pl"><span class="json-key">"experience"</span><span class="json-colon">:</span> <span class="json-num">"4+ years"</span><span class="json-comma">,</span></div>
+              <div class="json-line pl"><span class="json-key">"projects"</span><span class="json-colon">:</span> <span class="json-num">40</span><span class="json-comma">,</span></div>
+              <div class="json-line pl"><span class="json-key">"clients"</span><span class="json-colon">:</span> <span class="json-num">20</span><span class="json-comma">,</span></div>
+              <div class="json-line pl"><span class="json-key">"remote"</span><span class="json-colon">:</span> <span class="json-bool">true</span></div>
+              <div class="json-line"><span class="json-bracket">}</span></div>
+            </div>
+            <div class="terminal-footer">
+              <div class="status-row">
+                <div class="chip-dot chip-green"></div>
+                <span>Open to opportunities</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: text + highlights -->
+          <div class="about-text animate-on-scroll slide-right">
+            <p class="about-bio">
+              I'm a passionate <strong>Front-End Developer</strong> who transforms complex ideas into elegant, lightning-fast web applications. With 4+ years of hands-on experience, I specialize in building scalable interfaces with <strong>JavaScript, React</strong>, and modern CSS.
+            </p>
+            <p class="about-bio">
+              I believe great software lives at the intersection of clean code and beautiful design. Every project I take on is a chance to deliver not just functionality, but an experience people genuinely enjoy.
+            </p>
+            <p class="about-bio">
+              When I'm not shipping features, you'll find me exploring new browser APIs, contributing to open source, or writing about web performance.
+            </p>
+
+            <!-- Stats grid -->
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-number" data-count="4">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Years Exp.</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" data-count="40">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" data-count="20">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Clients</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">100</span>
+                <span class="stat-suffix">%</span>
+                <span class="stat-label">Passion</span>
+              </div>
+            </div>
+
+            <!-- Tech pills -->
+            <div class="tech-stack">
+              <span class="tech-label">Stack:</span>
+              <div class="tech-pills">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Figma</span>
+              </div>
+            </div>
+
+            <div class="about-ctas">
+              <a href="#contact" class="btn btn-primary">
+                <span>Get In Touch</span>
+              </a>
+              <a href="#" class="btn btn-ghost" download>
+                <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 3v10m0 0l-3-3m3 3l3-3M3 17h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Download CV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="eyebrow-row">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">Expertise</span>
+          </div>
+          <h2 class="section-title">My <span class="accent-text">Skills</span></h2>
+          <p class="section-subtitle">Technologies and tools I use to build exceptional products.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill category card -->
+          <div class="skill-card animate-on-scroll scale-in">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M8 9l4-4 4 4M8 15l4 4 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="skill-category">Frontend</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">JavaScript (ES2024)</span><span class="skill-pct">95%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="95" style="--bar-color: #00e5b0;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">React / Next.js</span><span class="skill-pct">92%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="92" style="--bar-color: #00e5b0;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">HTML5 / CSS3</span><span class="skill-pct">97%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="97" style="--bar-color: #00e5b0;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">TypeScript</span><span class="skill-pct">85%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="85" style="--bar-color: #00e5b0;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card animate-on-scroll scale-in" style="animation-delay: 0.1s">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="3" y="3" width="8" height="8" rx="2" stroke="var(--accent)" stroke-width="1.5"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="var(--accent)" stroke-width="1.5"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="var(--accent)" stroke-width="1.5"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="var(--accent)" stroke-width="1.5"/></svg>
+              </div>
+              <h3 class="skill-category">Styling & Design</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Tailwind CSS</span><span class="skill-pct">93%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="93" style="--bar-color: #38bdf8;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Sass / CSS Modules</span><span class="skill-pct">88%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="88" style="--bar-color: #38bdf8;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Figma</span><span class="skill-pct">80%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="80" style="--bar-color: #38bdf8;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Framer Motion</span><span class="skill-pct">82%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="82" style="--bar-color: #38bdf8;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card animate-on-scroll scale-in" style="animation-delay: 0.2s">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="var(--accent)" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <h3 class="skill-category">Tools & Ecosystem</h3>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Git / GitHub</span><span class="skill-pct">90%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="90" style="--bar-color: #a78bfa;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Vite / Webpack</span><span class="skill-pct">85%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="85" style="--bar-color: #a78bfa;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">REST / GraphQL</span><span class="skill-pct">80%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="80" style="--bar-color: #a78bfa;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Node.js</span><span class="skill-pct">72%</span></div>
+                <div class="skill-track"><div class="skill-bar" data-width="72" style="--bar-color: #a78bfa;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ PROJECTS ░░ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="eyebrow-row">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">Work</span>
+          </div>
+          <h2 class="section-title">Featured <span class="accent-text">Projects</span></h2>
+          <p class="section-subtitle">A selection of projects that showcase my skills and approach.</p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="filter-bar animate-on-scroll" role="tablist" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="react" role="tab" aria-selected="false">React</button>
+          <button class="filter-btn" data-filter="javascript" role="tab" aria-selected="false">JavaScript</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full-Stack</button>
+        </div>
+
+        <!-- Projects grid -->
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="project-card animate-on-scroll" data-category="react fullstack">
+            <div class="project-visual" style="--grad: linear-gradient(135deg, rgba(0,229,176,0.2), rgba(56,189,248,0.15)) ">
+              <img src="./image/card1.png" alt="">
+              <div class="project-number">01</div>
+              <div class="project-overlay">
+                <a href="https://mahmoud221114.github.io/My-Portfolio/indx.html" class="proj-btn" aria-label="Live demo">
+                  <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 3H5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-5M13 3h4v4M10 10l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/mahmoud221114/My-Portfolio" class="proj-btn proj-btn-ghost" aria-label="GitHub code">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.933.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">JavaScript</span><span class="ptag">Css</span><span class="ptag">Node.js</span>
+              </div>
+              <h3 class="project-title">Portfolio</h3>
+              <p class="project-desc">My personal portfolio website showcasing my projects and skills in web development.</p>
+              <div class="project-links">
+                <a href="https://mahmoud221114.github.io/My-Portfolio/indx.html" class="plink">Live Demo ↗</a>
+                <a href="https://github.com/mahmoud221114/My-Portfolio" class="plink plink-dim">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" data-category="react javascript" style="animation-delay: 0.08s">
+            <div class="project-visual" style="--grad: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(244,114,182,0.15))">
+              <img src="./image/card2.png" alt="">
+              <div class="project-number">02</div>
+              <div class="project-overlay">
+                <a href="https://mahmoud221114.github.io/travel/indx.html" class="proj-btn">Live Demo</a>
+                <a href="https://github.com/mahmoud221114/travel" class="proj-btn proj-btn-ghost">Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">JavaScript</span><span class="ptag">Css</span><span class="ptag">Firebase</span>
+              </div>
+              <h3 class="project-title">travel</h3>
+              <p class="project-desc">The website Travel is built using HTML to structure the content and layout, CSS for styling, design, and responsiveness, and JavaScript to add interactivity and dynamic behavior.</p>
+              <div class="project-links">
+                <a href="https://mahmoud221114.github.io/travel/indx.html" class="plink">Live Demo ↗</a>
+                <a href="https://github.com/mahmoud221114/travel" class="plink plink-dim">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" data-category="javascript" style="animation-delay: 0.16s">
+            <div class="project-visual" style="--grad: linear-gradient(135deg, rgba(52,211,153,0.2), rgba(6,182,212,0.15))">
+              <img src="./image/card3.png" alt="">
+              <div class="project-number">03</div>
+              <div class="project-overlay">
+                <a href="https://mahmoud221114.github.io/Weather_js/" class="proj-btn">Live Demo</a>
+                <a href="https://github.com/mahmoud221114/Weather_js" class="proj-btn proj-btn-ghost">Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag"> JavaScript</span><span class="ptag">CSS3</span><span class="ptag">API</span>
+              </div>
+              <h3 class="project-title">Weather</h3>
+              <p class="project-desc">A responsive weather application that fetches real-time weather data from a public API and displays it in an attractive UI.</p>
+              <div class="project-links">
+                <a href="https://mahmoud221114.github.io/Weather_js/" class="plink">Live Demo ↗</a>
+                <a href="https://github.com/mahmoud221114/Weather_js" class="plink plink-dim">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" data-category="react" style="animation-delay: 0.04s">
+            <div class="project-visual" style="--grad: linear-gradient(135deg, rgba(251,191,36,0.2), rgba(249,115,22,0.15))">
+              <img src="./image/card4.png" alt="">
+              <div class="project-number">04</div>
+              <div class="project-overlay">
+                <a href="https://mahmoud221114.github.io/online-courese/home.html" class="proj-btn">Live Demo</a>
+                <a href="https://github.com/mahmoud221114/online-courese" class="proj-btn proj-btn-ghost">Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">React</span><span class="ptag">DnD Kit</span><span class="ptag">Zustand</span>
+              </div>
+              <h3 class="project-title">Online Courses</h3>
+              <p class="project-desc">An online course platform built with React, featuring course browsing, enrollment, and progress tracking.</p>
+              <div class="project-links">
+                <a href="https://mahmoud221114.github.io/online-courese/home.html" class="plink">Live Demo ↗</a>
+                <a href="https://github.com/mahmoud221114/online-courese" class="plink plink-dim">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" data-category="fullstack javascript" style="animation-delay: 0.12s">
+            <div class="project-visual" style="--grad: linear-gradient(135deg, rgba(244,63,94,0.2), rgba(239,68,68,0.12))">
+              <img src="./image/card5.png" alt="">
+              <div class="project-number">05</div>
+              <div class="project-overlay">
+                <a href="https://mahmoud221114.github.io/JavaScript/project%20javascript/indx.html" class="proj-btn">Live Demo</a>
+                <a href="https://github.com/mahmoud221114/JavaScript" class="proj-btn proj-btn-ghost">Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">JavaScript</span><span class="ptag">HTML</span><span class="ptag">CSS</span>
+              </div>
+              <h3 class="project-title">Website</h3>
+              <p class="project-desc">A responsive website built with modern JavaScript, HTML, and CSS.</p>
+              <div class="project-links">
+                <a href="https://mahmoud221114.github.io/JavaScript/project%20javascript/indx.html" class="plink">Live Demo ↗</a>
+                <a href="https://github.com/mahmoud221114/JavaScript" class="plink plink-dim">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll" data-category="react fullstack" style="animation-delay: 0.2s">
+            <div class="project-visual" style="--grad: linear-gradient(135deg, rgba(14,165,233,0.2), rgba(99,102,241,0.15))">
+              <img src="./image/card6.png" alt="">
+              <div class="project-number">06</div>
+              <div class="project-overlay">
+                <a href="https://mahmoud221114.github.io/Kasper/" class="proj-btn">Live Demo</a>
+                <a href="https://github.com/mahmoud221114/Kasper" class="proj-btn proj-btn-ghost">Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span>
+              </div>
+              <h3 class="project-title">Kasper</h3>
+              <p class="project-desc">A responsive website built with modern HTML, CSS, and JavaScript.</p>
+              <div class="project-links">
+                <a href="https://mahmoud221114.github.io/Kasper/" class="plink">Live Demo ↗</a>
+                <a href="https://github.com/mahmoud221114/Kasper" class="plink plink-dim">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SERVICES ░░ -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="eyebrow-row">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">Services</span>
+          </div>
+          <h2 class="section-title">What I <span class="accent-text">Offer</span></h2>
+          <p class="section-subtitle">Comprehensive frontend solutions tailored to help your business grow.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll slide-up" style="--svc-accent: #00e5b0; animation-delay:0s">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M4 7h16M4 12h10M4 17h7" stroke="var(--svc-accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-title">Frontend Development</h3>
+            <p class="service-desc">Pixel-perfect, performance-optimized web apps using React, Next.js, and modern CSS. From SPAs to complex dashboards.</p>
+            <ul class="service-list">
+              <li>React / Next.js Applications</li>
+              <li>Performance Optimization</li>
+              <li>Responsive Design</li>
+              <li>Accessibility (WCAG 2.1)</li>
+            </ul>
+            <a href="#contact" class="service-cta">Get Started →</a>
+          </div>
+
+          <div class="service-card animate-on-scroll slide-up" style="--svc-accent: #38bdf8; animation-delay:0.1s">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><circle cx="12" cy="12" r="3" stroke="var(--svc-accent)" stroke-width="1.5"/><path d="M12 5v2M12 17v2M5 12H3M21 12h-2M7.05 7.05L5.64 5.64M18.36 18.36l-1.41-1.41M7.05 16.95l-1.41 1.41M18.36 5.64l-1.41 1.41" stroke="var(--svc-accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-title">UI/UX Engineering</h3>
+            <p class="service-desc">Turning designs into living, breathing interfaces. Smooth animations, micro-interactions, and state-driven UX that delights users.</p>
+            <ul class="service-list">
+              <li>Animation & Motion Design</li>
+              <li>Design System Implementation</li>
+              <li>Component Libraries</li>
+              <li>Micro-interactions</li>
+            </ul>
+            <a href="#contact" class="service-cta">Get Started →</a>
+          </div>
+
+          <div class="service-card animate-on-scroll slide-up" style="--svc-accent: #a78bfa; animation-delay:0.2s">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="var(--svc-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="service-title">Technical Consulting</h3>
+            <p class="service-desc">Architecture reviews, codebase audits, and technical mentoring for teams looking to level up their frontend practices.</p>
+            <ul class="service-list">
+              <li>Code Reviews & Audits</li>
+              <li>Architecture Planning</li>
+              <li>Performance Auditing</li>
+              <li>Team Mentoring</li>
+            </ul>
+            <a href="#contact" class="service-cta">Get Started →</a>
+          </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner animate-on-scroll">
+          <div class="cta-banner-inner">
+            <h3>Ready to build something amazing?</h3>
+            <p>I'm available for freelance projects and full-time positions. Let's talk.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-lg">Start a Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <div class="eyebrow-row">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">Contact</span>
+          </div>
+          <h2 class="section-title">Let's <span class="accent-text">Work Together</span></h2>
+          <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left info -->
+          <div class="contact-info animate-on-scroll slide-left">
+            <div class="contact-card">
+              <h3 class="contact-card-title">Mahmoud Elarby</h3>
+              <p class="contact-role">Front-End Developer</p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M2.5 6.5l7.5 5 7.5-5M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  </div>
+                  <span>mahmoud112233446547@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M10 11.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" stroke="var(--accent)" stroke-width="1.2"/><path d="M10 2a7 7 0 00-7 7c0 5 7 9 7 9s7-4 7-9a7 7 0 00-7-7z" stroke="var(--accent)" stroke-width="1.2"/></svg>
+                  </div>
+                  <span>Egypt · Remote Worldwide</span>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <div class="chip-dot chip-green"></div>
+                  </div>
+                  <span class="avail-text">Available for work</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="social-grid">
+              <a href="https://github.com/Mahmoud221114" class="social-card" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.933.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/mahmoud-elarby-15aaa5237" class="social-card" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="#" class="social-card" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>Twitter</span>
+              </a>
+              <a href="mahmoud112233446547@gmail.com" class="social-card" aria-label="Email">
+                <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M2.5 6.5l7.5 5 7.5-5M3 4h14a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="contact-form-wrap animate-on-scroll slide-right">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" autocomplete="name" />
+                  <span class="form-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" autocomplete="email" />
+                  <span class="form-error" id="email-error"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" />
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="5"></textarea>
+                <span class="form-error" id="message-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M3 10h14M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="btn-spinner" hidden>
+                  <svg viewBox="0 0 20 20" fill="none" width="16" height="16" class="spin"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2" stroke-dasharray="32" stroke-dashoffset="12"/></svg>
+                </span>
+              </button>
+              <div class="form-success" id="form-success" hidden>
+                <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M4 10l4.5 4.5L16 6" stroke="#00e5b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Message sent successfully! I'll get back to you soon.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M4 8l5 4-5 4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 16h9" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="logo-text">ME<span class="logo-dot">.</span></span>
+          </div>
+          <p class="footer-tagline">Building the web, one component at a time.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://github.com/Mahmoud221114" aria-label="GitHub" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.933.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mahmoud-elarby-15aaa5237" aria-label="LinkedIn" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Mahmoud Elarby · All rights reserved.</p>
+        <p class="footer-craft">Crafted with ♥ in HTML, CSS & JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
